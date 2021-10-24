@@ -129,6 +129,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   max-height: 70px;
 }
+#header .logo2 img {
+
+  max-height: 70px;
+}
+
 
 @media (max-width: 768px) {
   #header.header-scrolled {
@@ -418,7 +423,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 20%;
   bottom: 30%;
   border-radius: 50px;
-  cursor: pointer;
+  
 }
 
 .scroll-down::before,
@@ -523,7 +528,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background-color: #f8fbfd;
+  
   min-height: 40px;
 }
 
@@ -564,14 +569,14 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# About
+
 --------------------------------------------------------------
 .about {
-  background: url("../img/about-bg.jpg") center center no-repeat;
+  background: url("../img/pexels-roberto-shumski-1903702.jpg") center center no-repeat;
   background-size: cover;
   padding: 0px 0;
   position: relative;
+  
 }
 
 .about::before {
@@ -581,7 +586,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.75);
+
   z-index: 9;
 }
 
@@ -591,19 +596,18 @@ section {
 }
 
 .about .content {
-  padding: 10px 30px 0px 0;
+  padding: 30px 30px 30px 0;
 }
 
 .about .content h3 {
   font-weight: 700;
-  font-size: 25px;
-  color: #000000;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 34px;
+  color: #0a0f11;
+  margin-bottom: 30px;
 }
 
 .about .content p {
-  margin-bottom: 0px;
+  margin-bottom: 30px;
 }
 
 .about .content .about-btn {
@@ -624,7 +628,7 @@ section {
 }
 
 .about .content .about-btn:hover {
-  background: #7bbad7;
+  background: #fd2424;
 }
 
 .about .icon-boxes .icon-box {
@@ -644,8 +648,8 @@ section {
 }
 
 .about .icon-boxes .icon-box p {
-  font-size: 15.5px;
-  color: #848484;
+  font-size: 15px;
+  color: #cac5c5;
 }
 
 @media (max-width: 1200px) {
@@ -1980,4 +1984,38 @@ letter-spacing: 1px;
   width: 200px;
   margin: auto;
   margin-bottom: 20px;
+}
+.about{
+
+  background-image: linear-gradient(rgba(44, 42, 42, 0.555), rgba(0, 0, 0, 0.555)),
+  url(/assets/img/pexels-roberto-shumski-1903702.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+
+font-weight: 400;
+letter-spacing: 1px;
+
+
+}
+.about p{
+
+  color: rgb(214, 220, 226);
+}
+.about h4{
+  color: rgb(0, 0, 0);
+}
+.about{
+  padding-top: 50px;
+}
+.about h3{
+  margin-top: 190px;
+}
+@media(max-width:744px){
+
+  .about h3{
+    margin-top: 0px;
+  }
+
 }
