@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Linked BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+    <!-- linking google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&display=swap"
+        rel="stylesheet">
+
+
+
+
+    <!-- Linked jcarousel css and themeCss -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+
+
+    <link rel="stylesheet" href="../projects/navbar.css">
+
+
+
+
+    <!-- Linked Custom CSS -->
+    <link rel="stylesheet" href="./gallerystyles.css">
+
+
+    <!-- linking the ion-icon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+    
+    <link rel="stylesheet" href="../projects/footer.css">
+
+
+    <title>Gallery</title>
+
+
+    <!-- linking favicon -->
+    <link rel="icon" href="../img/favicon.ico">
+
+
+</head>
+
+
+
+<body>
+
+
+    <!-- JOIN US BTN -->
+    <a href="#" id="join" class="join_us">JOIN US!</a>
+
+
+    <!-- Nav-Bar starts here -->
+    <div class="banner">
+        <div class="container">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" id="logonav" href="#"><img src="../home-page-contents/img/drawing.svg"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                        onclick="myFunction('logonav')">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+    
+                            <li class="nav-item left">
+                                <a class="nav-link" href="../index.html" style="color: white;">Home</a>
+                            </li>
+                            <li class="nav-item ch">
+                                <a class="nav-link" href="../index.html#about"
+                                    style="color: white;">About</a>
+                            </li>
+                            <li class="nav-item ch">
+                                <a class="nav-link desk" href="../events-page/index.html" style="color: white;">Event</a>
+                                <a class="nav-link mobile" style="color: white;"
+                                    onclick="myFunction('event-year')">Event</a>
+                                <ul class="drop-menu">
+                                    <li><a href="../events-page/index.html"><button>2021-22</button></a></li>
+                                    <li><a href="../events-page/index2.html"><button>2020-21</button></a></li>
+                                </ul>
+                                <ul class="years-list" id="event-year">
+                                    <li><a href="../events-page/index.html"><button>2021-22</button></a></li>
+                                    <li><a href="../events-page/index2.html"><button>2020-21</button></a></li>
+                                </ul>
+                            </li>
+    
+                            </li>
+                            <li class="nav-item ch">
+                                <a class="nav-link desk" href="../Teams Page/teams.html" style="color: white;">Team</a>
+                                <a class="nav-link mobile" style="color: white;" onclick="myFunction('team-year')">Team</a>
+                                <ul class="drop-menu">
+                                    <li><a href="../Teams Page/teams.html"><button>2021-22</button></a></li>
+                                    <li><a href="../Teams Page/teams2.html"><button>2020-21</button></a></li>
+                                    <li><a href="../Teams Page/teams3.html"><button>2019-20</button></a></li>
+                                    <li><a href="../Teams Page/teams4.html"><button>2018-19</button></a></li>
+                                </ul>
+                                <ul class="years-list" id="team-year">
+                                    <li><a href="../Teams Page/teams.html"><button>2021-22</button></a></li>
+                                    <li><a href="../Teams Page/teams2.html"><button>2020-21</button></a></li>
+                                    <li><a href="../Teams Page/teams3.html"><button>2019-20</button></a></li>
+                                    <li><a href="../Teams Page/teams4.html"><button>2018-19</button></a></li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+    
+                            <li class="nav-item ch">
+                                <a class="nav-link desk" href="../Blog-page/blog.html" style="color: white;">Blog</a>
+                                <a class="nav-link mobile" style="color: white;" href="../Blog-page/blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item ch">
+                                <a class="nav-link desk" href="../gallery page/gallery.html#home"
+                                    style="color: white;">Gallery</a>
+                                <a class="nav-link mobile" style="color: white;"
+                                    onclick="myFunction('gallery-year')">Gallery</a>
+                                <ul class="drop-menu">
+                                    <li><a href="#2021-2022"><button>2021-22</button></a></li>
+                                    <li><a href="#2020-2021"><button>2020-21</button></a></li>
+                                    <li><a href="#2019-2020"><button>2019-20</button></a></li>
+                                    <li><a href="#2018-2019"><button>2018-19</button></a></li>
+                                </ul>
+                                <ul class="years-list" id="gallery-year">
+                                    <li><a href="#2021-2022"><button>2021-22</button></a></li>
+                                    <li><a href="#2020-2021"><button>2020-21</button></a></li>
+                                    <li><a href="#2019-2020"><button>2019-20</button></a></li>
+                                    <li><a href="#2018-2019"><button>2018-19</button></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item ch">
+                                <a class="nav-link desk" href="../projects/project.html" style="color: white;">Project</a>
+                                <a class="nav-link mobile" href="../projects/project.html" style="color: white;">Project</a>
+    
+                            </li>
+                            <li class="nav-item right">
+                                <a class="nav-link" href="../contact-page/index.html" style="color: white;">Contact</a>
+                            </li>
+    
+                        </ul>
+                    </div>
+                </nav>
+    
+            </div>
+        </div>
+    </div>
+    <!-- Nav-Bar ends here -->
+
+
+
+
+
+
+    <!-- Scroll Button -->
+    <ion-icon onclick="topFunction()" class="scroll-btn" id="myBtn" title="Go to top" name="arrow-up-circle-outline">
+    </ion-icon>
+
+
+
+    <!-- hero image starts -->
+    <div class="hero-image" id="home">
+        <div class="hero-text">
+            <h1>&ltGallery/&gt</h1>
+        </div>
+    </div>
+    <!-- hero image ends -->
+
+
+
+    <!-- -----------------------------
+        SPECIAL Gallery starts
+    ----------------------------- -->
+
+    <section class="selective" id="special">
+        <div class="container">
+            <div class="row slider">
+                <div class="col-md-6">
+                    <div class="img-zoom">
+                        <img src="./img/2017-18/1.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>2 days Python programming workshop</h3>
+                                <p>Date : 27 Jan 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/1.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Workshop on Machine Learning using Python</h3>
+                                <p>Workshop was conducted by Amartya Ranjan Saikia and Subhajit Saha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-zoom">
+                        <img src="./img/2020-21/4.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Study Jam</h3>
+                                <p>Exposure to Copmpetitive Coding for the new students</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -----------------------------
+            SPECIAL Gallery ends
+        ----------------------------- -->
+
+
+
+
+
+
+    <!-- -------------------
+        Gallery1 starts here
+        ------------------- -->
+    <!-- <div class="container"> -->
+    <section class="gallery-1" id="2020-2021">
+        <h2><span class="thin">&lt</span>2020-21<span class="thin">/&gt</span></h2>
+        <div class="container">
+            <div class="row slider1">
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2020-21/1.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Git learning Session</h3>
+                                <p>A git learning Session was organised for the new members of the club.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2020-21/2.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Ideathon 2021</h3>
+                                <p>An ideathon organised to give students exposure to higher level hackathons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2020-21/3.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Induction Program</h3>
+                                <p>An online meet welcoming the new batch to the club.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2020-21/4.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Study Jam</h3>
+                                <p>Exposure to Copmpetitive Coding for the new students</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------
+        Gallery1 ends here
+        ------------------- -->
+
+
+
+
+
+    <!-- -------------------
+        Gallery2 starts here
+        ------------------- -->
+    <section class="gallery-2" id="2019-2020">
+        <h2><span class="thin">&lt</span>2019-20<span class="thin">/&gt</span></h2>
+
+        <div class="container">
+            <div class="row slider1">
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/1.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Workshop on Machine Learning using Python</h3>
+                                <p>Workshop Amartya Ranjan Saikia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/2.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Sessions on  C, C++, Python, Webdev</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/3.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>2019 induction program of the new batch</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/4.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Workshop by Amartya Ranjan Saikia and  7th semester students</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/5.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Workshop on Machine Learning using Python</h3>
+                                <p>Workshop Subhajit Saha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/6.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Sessions on Android Development</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="./img/2019-20/7.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Sessions on Blockchain</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------
+        Gallery2 ends here
+        ------------------- -->
+
+
+
+
+    <!-- -------------------
+        Gallery3 starts here
+        ------------------- -->
+    <section class="gallery-3" id="2018-2019">
+        <h2><span class="thin">&lt</span>2018-19<span class="thin">/&gt</span></h2>
+
+        <div class="container">
+            <div class="row slider1">
+                <div class="col-md-3">
+                    <div class="img-zoom">
+                        <img src="./img/2018-19/1.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <p>Induction Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="img-zoom">
+                        <img src="./img/2018-19/2.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <p>Induction Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="img-zoom">
+                        <img src="./img/2018-19/3.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <p>Induction Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="img-zoom">
+                        <img src="./img/2018-19/4.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <p>Induction Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="img-zoom">
+                        <img src="./img/2018-19/5.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <p>Induction Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="img-zoom">
+                        <img src="./img/2018-19/6.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <p>Induction Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------
+        Gallery3 ends here
+        ------------------- -->
+
+
+
+    <!-- <hr> -->
+
+    <!-- -------------------
+        Gallery4 starts here
+        ------------------- -->
+    <!-- <section class="gallery-4" id="2017-2018">
+        <h2><span class="thin">&lt</span>2017-18<span class="thin">/&gt</span></h2>
+
+        <div class="container">
+            <div class="row slider1">
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/1.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/2.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/3.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/4.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/4.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/5.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/6.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/7.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/8.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-zoom">
+                        <img src="img/9.jpg" class="img-fluid" alt="">
+                        <div class="overlay">
+                            <div class="text">
+                                <h3>Event:- xxxxxxxxxxxx</h3>
+                                <p>event description in one line</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- </div> -->
+    <!-- -------------------
+    Gallery4 ends here
+    ------------------- -->
+
+
+
+
+    <!-- Footer starts here -->
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="footer-basic">
+                <footer>
+                    <div class="social"><a href="https://instagram.com/aec_codingclub?utm_medium=copy_link" target="_blank"><i class="icon ion-social-instagram"></i></a><a href="https://www.linkedin.com/company/aec-coding-club/" target="_blank"><i
+                                class="icon ion-social-linkedin"></i></a><a href="https://twitter.com/AEC_CodingClub" target="_blank"><i
+                                class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/aeccodingclub" target="_blank"><i
+                                class="icon ion-social-facebook"></i></a><a href="https://www.youtube.com/channel/UCsNneY49G-dFSQzX6WnMADA" target="_blank"><i
+                                class="icon ion-social-youtube" target="_blank"></i></a></div>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="../home-page-contents/home.html">Home</a></li>
+                        <li class="list-inline-item"><a href="../events-page/index.html">Events</a></li>
+                        <li class="list-inline-item"><a href="../Teams Page/teams.html">Team</a></li>
+                        <li class="list-inline-item"><a href="../gallery page/gallery.html">Gallery</a></li>
+                        <li class="list-inline-item"><a href="../projects/project.html">Projects</a></li>
+                    </ul>
+                    <p class="copyright"> © Coding Club AEC 2021</p>
+                </footer>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+
+
+
+
+
+
+
+
+
+
+    <!-- linking ion icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+    <!-- linking jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <!-- linking bbotstrap 4.4 cdn -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- linking slick-carousel min.js cdn  -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+    <!-- linking external javascript file -->
+    <script src="./gallery.js"></script>
+    <script src="../home-page-contents/navbar.js"></script>
+
+</body>
+
+
+
+</html>
