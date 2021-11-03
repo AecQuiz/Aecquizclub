@@ -4,7 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -61,6 +61,23 @@
   onscroll(document, navbarlinksActive)
 
   /**
+   * Hero Section javascrpt
+   */
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    $('.parallex-zoom-blur img').css({
+      width: (100 + scroll / 5) + "%",
+      top: -(scroll / 10) + '%',
+      '-webkit-filter': 'blur(' + (scroll / 100) + 'px)',
+      filter: 'blur(' + (scroll / 100) + 'px)',
+    })
+  })
+
+
+
+
+
+  /**
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
@@ -113,7 +130,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -122,7 +139,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -132,7 +149,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -171,9 +188,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -181,7 +198,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -274,50 +291,49 @@ debounce();
 
 // Navbar Hidden  
 
-    const hero = document.getElementById('hero');
-    const nav = document.getElementById('header');
+const hero = document.getElementById('hero');
+const nav = document.getElementById('header');
 
-    function HandleScroll(){
-        const heroLength = hero.offsetHeight;
-        let reqScrollHeight= window.scrollY + window.innerHeight;
-        let isVisible = reqScrollHeight > 1.8*heroLength;
-        isVisible ? nav.style.setProperty('display','block') : nav.style.setProperty('display','none')
-        // isVisible ? nav.classList.add('header-scrolled') : nav.classList.remove('header-scrolled')
-    }
+function HandleScroll() {
+  const heroLength = hero.offsetHeight;
+  let reqScrollHeight = window.scrollY + window.innerHeight;
+  let isVisible = reqScrollHeight > 1.8 * heroLength;
+  isVisible ? nav.style.setProperty('display', 'block') : nav.style.setProperty('display', 'none')
+  // isVisible ? nav.classList.add('header-scrolled') : nav.classList.remove('header-scrolled')
+}
 
-    window.addEventListener('scroll', debounce(HandleScroll));
+window.addEventListener('scroll', debounce(HandleScroll));
 
 
 // Join Us Button
 
-  /*const join_button= document.getElementById('join');
+/*const join_button= document.getElementById('join');
 
-    function showButton(){
-      const heroLength = hero.offsetHeight;
-      let reqScrollHeight= window.scrollY + window.innerHeight;
-      let isVisible = reqScrollHeight > 1.1*heroLength;
-      isVisible ? join_button.style.setProperty('display','block') : join_button.style.setProperty('display','none');
-      // isVisible ? visibility = true : visibility= false;
+  function showButton(){
+    const heroLength = hero.offsetHeight;
+    let reqScrollHeight= window.scrollY + window.innerHeight;
+    let isVisible = reqScrollHeight > 1.1*heroLength;
+    isVisible ? join_button.style.setProperty('display','block') : join_button.style.setProperty('display','none');
+    // isVisible ? visibility = true : visibility= false;
+}
+window.addEventListener('scroll', debounce(showButton))
+*/
+
+const join = document.querySelector(".join_us");
+const refreshButton = () => {
+  if (document.documentElement.scrollTop <= 1040) {
+    join.style.display = "none";
   }
-  window.addEventListener('scroll', debounce(showButton))
-  */
+  else {
+    join.style.display = "block";
+  }
+};
+refreshButton();
 
-  const join=document.querySelector(".join_us");
-  const refreshButton = () => {
-    if(document.documentElement.scrollTop <= 1040){
-      join.style.display = "none";
-    }
-    else{
-      join.style.display = "block";
-    }
-  };
+document.addEventListener("scroll", (e) => {
   refreshButton();
-
-  document.addEventListener("scroll", (e) =>{
-    refreshButton();
-  })
-  
+})
 
 
 
-  
+
