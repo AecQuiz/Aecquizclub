@@ -370,6 +370,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+  opacity: 0.9;
 }
 .heroContent{
   /* border: 2px solid red; */
@@ -479,8 +480,23 @@ h1, h2, h3, h4, h5, h6 {
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
+}
+
+.icons{
+  position: relative;
+  bottom: 6.2rem;
+}
+.icons ion-icon{
+  transition: all 0.5s ease;
+  padding: 5px;
+}
+.icons ion-icon:hover{
+  transform: translateY(-20px);
+}
+.icons a{
+  color: #414152;
 }
 
 
